@@ -10,9 +10,9 @@ GPIOA->MODER &=~(1<<5);
 	while (1){
 		//El led se enciende con una signal positiva.
 		GPIOA->BSRR =(1<<5);
-		delayMs(50);
+		delayMs(40);
 		GPIOA->BSRR =(1<<21);
-		delayMs(50);
+		delayMs(40);
     }
 
 return 0;
