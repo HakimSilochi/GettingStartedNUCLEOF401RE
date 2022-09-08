@@ -114,15 +114,15 @@ GPIOA->MODER &=~(1<<5);
  8000208:	4b07      	ldr	r3, [pc, #28]	; (8000228 <main+0x54>)
  800020a:	2220      	movs	r2, #32
  800020c:	619a      	str	r2, [r3, #24]
-		delayMs(20);
- 800020e:	2014      	movs	r0, #20
+		delayMs(50);
+ 800020e:	2032      	movs	r0, #50	; 0x32
  8000210:	f000 f80c 	bl	800022c <delayMs>
 		GPIOA->BSRR =(1<<21);
  8000214:	4b04      	ldr	r3, [pc, #16]	; (8000228 <main+0x54>)
  8000216:	f44f 1200 	mov.w	r2, #2097152	; 0x200000
  800021a:	619a      	str	r2, [r3, #24]
-		delayMs(20);
- 800021c:	2014      	movs	r0, #20
+		delayMs(50);
+ 800021c:	2032      	movs	r0, #50	; 0x32
  800021e:	f000 f805 	bl	800022c <delayMs>
 		GPIOA->BSRR =(1<<5);
  8000222:	e7f1      	b.n	8000208 <main+0x34>
@@ -130,7 +130,7 @@ GPIOA->MODER &=~(1<<5);
  8000228:	40020000 	.word	0x40020000
 
 0800022c <delayMs>:
-
+    }
 
 return 0;
 
